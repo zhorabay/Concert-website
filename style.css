@@ -104,15 +104,19 @@ h2 span {
     align-items: center;
     background-color: #272a31;
     color: #fff;
-    padding: 0 65px;
+    padding: 0 14%;
   }
 
   .nav-grey ul {
     display: flex;
-    gap: 14px;
+    gap: 18px;
     list-style: none;
-    font-size: 14px;
+    font-size: 12px;
     padding: 10px 0;
+  }
+
+  .fab {
+    font-size: 20px;
   }
 
   .hamburger {
@@ -122,26 +126,39 @@ h2 span {
   .container {
     display: flex;
     justify-content: space-between;
-    padding: 10px 60px 10px 40px;
+    padding: 1% 14%;
     background-color: #fff;
     box-shadow: 1px 2px 3px rgba(218, 218, 218, 0.8);
   }
 
   .container h2 {
-    display: inline;
+    display: flex;
+    align-items: center;
     font-size: 30px;
   }
 
   .container nav {
     display: flex;
-    gap: 30px;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 70px;
+    font-size: 14px;
   }
 
   .container nav a {
-    font-size: 18px;
     text-decoration: none;
-    padding-top: 7px;
     color: #272a31;
+  }
+
+  .container nav a:hover {
+    color: #ec5242;
+  }
+
+  .campaign {
+    border: #ec5242 5px solid;
+    color: #ec5242;
+    padding: 10px 16px;
+    letter-spacing: -1px;
   }
 }
 
@@ -158,10 +175,9 @@ h2 span {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 90%;
+  width: 95%;
   padding: 90px 0 90px 40px;
   margin-top: -60px;
-  gap: 20px;
 }
 
 .texts h1 {
@@ -172,6 +188,7 @@ h2 span {
   background-clip: unset;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  padding-bottom: 20px;
 }
 
 .texts h2 {
@@ -184,13 +201,22 @@ h2 span {
 }
 
 .info {
-  border: 2px solid #ec5242;
+  border: 3px solid #fff;
   padding: 14px;
+  line-height: 25px;
+  letter-spacing: -1px;
 }
 
 .date {
-  font-weight: bold;
-  font-size: 30px;
+  font-weight: 800;
+  font-size: 35px;
+  padding-top: 35px;
+  padding-bottom: 15px;
+}
+
+.address {
+  font-size: 20px;
+  font-weight: 500;
 }
 
 @media screen and (min-width: 768px) {
@@ -200,17 +226,32 @@ h2 span {
   }
 
   .texts {
-    padding: 130px 0 150px 40px;
+    padding-left: 14%;
+    padding-bottom: 12%;
+    padding-top: 7%;
+  }
+
+  .texts h2 {
+    font-size: 60px;
+    font-weight: 500;
+  }
+
+  .texts h1 {
+    font-size: 70px;
+    font-weight: 1000;
+    line-height: 75px;
   }
 
   .texts p {
-    width: 50%;
+    width: 70%;
   }
 }
 
 /* Main Program */
 .program {
-  background-color: #272a31;
+  background-image: url(./images/prog-bg.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #d3d3d3;
 }
 
@@ -220,8 +261,13 @@ h2 span {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   padding: 50px 0;
+}
+
+.program-text h2 {
+  font-size: 25px;
+  font-weight: 400;
 }
 
 .divider {
@@ -245,7 +291,7 @@ h2 span {
   justify-content: center;
   align-items: center;
   padding: 10px;
-  gap: 2%;
+  gap: 1%;
   background-color: rgba(222, 220, 220, 0.1);
 }
 
@@ -271,9 +317,20 @@ h2 span {
   width: 62%;
 }
 
-.web-link {
+.card-body:hover {
+  border: 3px solid #fff;
+}
+
+.buy {
+  color: #fff;
+  background-color: #ec5242;
+  padding: 25px 95px;
   text-decoration: none;
-  color: #d3d3d3;
+  font-size: 18px;
+}
+
+.web-link {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -299,12 +356,28 @@ h2 span {
     text-align: center;
   }
 
+  .card-body p {
+    padding: 12px;
+    line-height: 20px;
+  }
+
   .card-title {
     font-size: 18px;
   }
 
   .divider {
-    width: 5%;
+    width: 3%;
+    height: 1px;
+  }
+
+  .web-link {
+    display: inline;
+    color: #d3d3d3;
+    padding: 26px 0;
+  }
+
+  .buy {
+    display: none;
   }
 }
 
@@ -517,33 +590,39 @@ h2 span {
   border-top: 1px solid grey;
 }
 
+.a-past {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
 .a-past-1 {
   background-image: url(./images/tour1.png);
   background-size: cover;
-  box-shadow: inset 0 0 0 2000px rgba(255, 165, 155, 0.7);
-  margin-bottom: 12px;
+  box-shadow: inset 0 0 0 2000px rgb(236, 82, 66, 0.345);
+  width: 320px;
+  height: 180px;
 }
 
 .a-past-2 {
   background-image: url(./images/tour2.webp);
   background-size: cover;
-  box-shadow: inset 0 0 0 2000px rgba(255, 134, 121, 0.7);
+  box-shadow: inset 0 0 0 2000px rgb(236, 82, 66, 0.4);
+  width: 320px;
+  height: 180px;
 }
 
 .a-past-blur {
   color: #fff;
   text-align: center;
-  padding: 120px;
+  padding-top: 60px;
   font-size: 20px;
 }
 
 @media screen and (min-width: 768px) {
-  .a-past-1 {
-    float: left;
-    margin-right: 20px;
-  }
-
-  .a-past-2 {
-    float: right;
+  .a-past {
+    flex-direction: row;
   }
 }
