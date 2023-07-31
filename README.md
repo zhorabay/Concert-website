@@ -19,7 +19,6 @@
 
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-
 # 📖 [JavaScript capstone project] <a name="about-project"></a>
 
 **[JavaScript capstone project]** 
