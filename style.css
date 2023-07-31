@@ -1,0 +1,407 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+/* Header */
+.container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 20px;
+}
+
+.container a {
+  text-decoration: none;
+  color: #272a31;
+}
+
+.nav-grey,
+.container h2,
+.container nav {
+  display: none;
+}
+
+.hamburger {
+  position: relative;
+  display: block;
+  width: 35px;
+  cursor: pointer;
+  z-index: 3;
+  appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.hamburger .bar,
+.hamburger::after,
+.hamburger::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 5px;
+  background-color: #272a31;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.hamburger.is-active::before {
+  transform: rotate(-45deg) translate(-8px, 6px);
+  background-color: #ec5242;
+}
+
+.hamburger.is-active::after {
+  transform: rotate(45deg) translate(-9px, -8px);
+  background-color: #ec5242;
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: block;
+  background-color: #d3d3d3;
+  padding-top: 120px;
+  transition: 0.4s;
+}
+
+.mobile-nav.is-active {
+  left: 0;
+}
+
+.mobile-nav a {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 16px;
+  text-align: center;
+  padding: 12px 16px;
+  font-size: 30px;
+  font-weight: 600;
+  color: #ec5242;
+  text-decoration: none;
+}
+
+h2 span {
+  color: #ec5242;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-grey {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #272a31;
+    color: #fff;
+    padding: 0 65px;
+  }
+
+  .nav-grey ul {
+    display: flex;
+    gap: 14px;
+    list-style: none;
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 60px 10px 40px;
+    background-color: #fff;
+    box-shadow: 1px 2px 3px rgba(218, 218, 218, 0.8);
+  }
+
+  .container h2 {
+    display: inline;
+    font-size: 30px;
+  }
+
+  .container nav {
+    display: flex;
+    gap: 30px;
+  }
+
+  .container nav a {
+    font-size: 18px;
+    text-decoration: none;
+    padding-top: 7px;
+    color: #272a31;
+  }
+}
+
+/* Main Page */
+.mainpage {
+  background-image: url(./images/mob-bg.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(218, 218, 218, 0.8);
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90%;
+  padding: 90px 0 90px 40px;
+  margin-top: -60px;
+  gap: 20px;
+}
+
+.texts h1 {
+  color: #ec5242;
+  font-size: 60px;
+  font-weight: 900;
+  background-image: url(./images/font-bg.jpeg);
+  background-clip: unset;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.texts h2 {
+  color: #ec5242;
+  font-size: 30px;
+}
+
+.texts p {
+  color: #272a31;
+}
+
+.info {
+  border: 2px solid #ec5242;
+  padding: 14px;
+}
+
+.date {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .mainpage {
+    background-image: url(./images/ed-bg.jpeg);
+    margin-top: 60px;
+  }
+
+  .texts {
+    padding: 130px 0 150px 40px;
+  }
+
+  .texts p {
+    width: 50%;
+  }
+}
+
+/* Main Program */
+.program {
+  background-color: #272a31;
+  color: #d3d3d3;
+}
+
+.program-text,
+.guests {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 50px 0;
+}
+
+.divider {
+  width: 15%;
+  height: 3px;
+  background-color: #ec5242;
+}
+
+.cards {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 4%;
+  width: 80%;
+  padding: 30px 0;
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 2%;
+  background-color: rgba(222, 220, 220, 0.1);
+}
+
+.card-body i {
+  order: 1;
+  width: 16%;
+  text-align: center;
+  color: #d3d3d3;
+  font-size: 35px;
+  text-shadow: 1.5px 1px #ec5242;
+}
+
+.card-title {
+  order: 2;
+  width: 22%;
+  text-align: center;
+  padding: 10px;
+  color: #ec5242;
+}
+
+.card-body p {
+  order: 3;
+  width: 62%;
+}
+
+.web-link {
+  text-decoration: none;
+  color: #d3d3d3;
+}
+
+@media screen and (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: start;
+    gap: 0.7%;
+  }
+
+  .card-body {
+    flex-direction: column;
+    font-size: 12px;
+    height: 100%;
+    justify-content: flex-start;
+    padding: 15px 0;
+  }
+
+  .card-body i,
+  .card-body p,
+  .card-title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .divider {
+    width: 5%;
+  }
+}
+
+/* Guest Singers */
+.guest-heading {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.guest-div {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  padding-top: 30px;
+}
+
+.guest-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+  padding-bottom: 70px;
+}
+
+.guest-images {
+  padding-right: 55px;
+}
+
+.guest-image {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  margin: 16px -36px;
+}
+
+.guest-image-bg {
+  width: 50px;
+  height: 50px;
+}
+
+.guest-job {
+  font-size: 12px;
+  color: #ec5242;
+}
+
+.guest-divider-grey {
+  width: 15px;
+  height: 2px;
+  background-color: rgba(211, 211, 211, 0.9);
+  margin: 0.3rem 0;
+}
+
+.guest-text {
+  font-size: 12px;
+  color: #272a31;
+}
+
+@media screen and (min-width: 768px) {
+  .guest-div {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: auto;
+  }
+}
+
+/* Partners */
+.partners {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 50px 0;
+  background-color: #272a31;
+  color: #d3d3d3;
+}
+
+.list-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 30px;
+  list-style: none;
+  font-size: 30px;
+  color: #b9b8b8;
+}
+
+.list-group span,
+#muzicolla {
+  font-weight: 900;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+  padding: 20px 30px;
+}
