@@ -23,7 +23,7 @@
 
 **[JavaScript capstone project]** 
 
-A website for a concert of Ed Sheeran.
+A website for a concert by Ed Sheeran.
 
 ## 🛠 Built With <a name="built-with"></a>
 - HTML
@@ -43,10 +43,9 @@ A website for a concert of Ed Sheeran.
 
 ### Key Features <a name="key-features"></a>
 
-- **[FlexBox]**
-- **[Grid]**
-- **[Hamburger button]**
-- **[JavaScript Cards]**
+- **[The user can open two pages: Home and About]**
+- **[The Home page demonstrates information about concert, main program, guest singers and partners]**
+- **[The About page demonstrates information about singer, past concerts and partners]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -126,14 +125,14 @@ Feel free to check the [issues page](https://github.com/zhorabay/Concert-website
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project feel free to star the repository and share it with others who might benefit from it.
+If you like this project feel free to give a star to the repository and share it with others who might benefit from it.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-Thanks to [Cindy Shin] for original design idea (https://www.behance.net/adagio07) in Behance, also Microverse team and my husband and daughter <3.
+Thanks to [Cindy Shin] for the original design idea (https://www.behance.net/adagio07) in Behance, also I would like to express my gratitude to the Microverse team, code reviewers, and coding/learning partners for their invaluable assistance in creating this project. Additionally, I want to thank my husband and daughter for their unwavering support.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
